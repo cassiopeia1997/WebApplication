@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Postlist of Current User</title>
+
+</head>
+
+<body>
+<h1> <%=username%></h1>
+<table style="width:100%">
+    <tr>
+        <th>postid</th>
+        <th>created</th>
+        <th>modified</th>
+        <th>title</th>
+        <th>body</th>
+    </tr>
+    <%for (let post of posts) {%>
+        <tr>
+            <td><%= post.postid%></td>
+            <td><%= post.created%></td>
+            <td><%= post.modified%></td>
+            <td><%- post.title%></td>
+            <td><%- post.body%></td>
+        </tr>
+    <% } %>
+</table>
+<div>
+
+
+    <% if (isLastPage) { %>
+        <a title="next page" id="next" href="?start=<%=start%>&p=<%= page+1 %>">next</a>
+    <% } %>
+</div>
+
+</body>
+
+</html>
