@@ -1,0 +1,13 @@
+input{
+  width:40%;
+  height: 20px;
+}
+textarea{
+  width:40%;
+  height: 150px;
+}
+label{
+  font-size: 20px;
+  font-weight: bold;
+  color:#939393;
+}

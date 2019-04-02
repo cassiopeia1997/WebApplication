@@ -1,0 +1,23 @@
+<div *ngIf="post">
+<div>
+  <label>Title<br>
+      <div>
+        <input [(ngModel)]="post.title" placeholder="name" (input)="disabled=false"/></div>
+        <br>
+   </label>
+</div>
+
+<div>
+    <label>Body
+      <div>
+        <textarea [(ngModel)]="post.body" (input)="disabled=false"></textarea></div></label>
+</div>
+<br>
+  Last Modified:{{post.modified | date: 'yyyy/M/dd h:mm:ss aa'}}
+  <br>
+  <div>
+  <button (click)="delete()">delete</button>
+  <button (click)="save()" [disabled]="disabled">save</button>
+    <button (click)="preview()">preview</button></div>
+</div>
+

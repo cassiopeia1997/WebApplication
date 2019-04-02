@@ -1,0 +1,9 @@
+<button (click)="add()">New Post</button>
+<ul class="list-group">
+  <li *ngFor="let post of posts" class="list-group-item" >
+    <a  routerLink="/edit/{{post.postid}}">
+      <div id="modified">{{post.modified | date: 'yyyy/M/dd h:mm:ss aa'}} &nbsp;&nbsp;</div>
+      <span id="postid">{{post.title}} </span>
+    </a></li>
+</ul>
+
